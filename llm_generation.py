@@ -8,7 +8,7 @@ def load_llm():
     global llm
     if llm is None:
         llm = Llama(
-            model_path="tinyllama-1.1b-chat-v0.3.Q4_K_M.gguf",
+            model_path="qwen2.5-0.5b-instruct-q5_k_m.gguf",
             n_ctx=2048,
             verbose=False
         )

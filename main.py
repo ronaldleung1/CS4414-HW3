@@ -15,9 +15,10 @@ def search_documents(query, index, docs, top_k=3):
     return retrieved_docs
 
 def augment_prompt(query, retrieved_docs):
-    prompt = query + " Top documents:"
+    prompt = "Query: " + query + "\nContext from relevant documents: "
     for doc in retrieved_docs:
         prompt += " " + doc
+    prompt += "\nAnswer: "
     return prompt
 
 def main():
